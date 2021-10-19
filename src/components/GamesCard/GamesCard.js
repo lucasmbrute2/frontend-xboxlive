@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function GamesCard({ game }){
+export default function GamesCard({ game , props }){
+    
     return(
-        <div>
-            {game.title}
-        </div>
+        <Link to={`/view/${game.id}`}>
+            <div>
+                {game.title}
+            </div>
+        </Link>
     )
 }

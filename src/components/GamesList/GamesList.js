@@ -7,7 +7,7 @@ export default function GamesList(){
     const [game,setGame]=useState([])
     useEffect(()=>{
         const loadGamesList = async ()=>{
-            const response = await Api.getAll()
+            const response = await Api.getAll("game")
             const results = await response.json()
             console.log(results)
             setGame(results)
