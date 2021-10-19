@@ -2,6 +2,7 @@ import React from "react";
 import GamesCard from "../GamesCard/GamesCard";
 import { useState, useEffect } from "react";
 import { Api } from "../../Api/Api";
+import "./GamesList.scss"
 
 export default function GamesList(){
     const [game,setGame]=useState([])
@@ -16,7 +17,6 @@ export default function GamesList(){
         const LoadUser = async ()=>{
             const response  = await Api.getAll("user")
             const results = await response.json()
-            console.log(results)
             setUser(results) //pegar o objeto User parar usar a foto de perfil na Home
         }
         loadGamesList()
@@ -26,17 +26,12 @@ export default function GamesList(){
         return "Carregando..."
     }
     return (
-        <div className='list-cards'>
-            <header className='list-cards-header'>
-                {user.map(()=>(
-                    <p>{user[0].profile[0].image}</p>
-                ))}
-            </header>
-            <div className="list-card_cards">
+        <div className='list-card'>
+            <section className="list-card-container">
                 {game.map((game,index)=>(
-                    <GamesCard key={`game_list_${index}`} game={game}/>
+                    <GamesCard key={`game_list_${index}`} game={game} className='list-card-container_card'/>
                 ))}
-            </div>
+            </section>
         </div>
     );
 }
