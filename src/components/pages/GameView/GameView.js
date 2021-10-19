@@ -5,7 +5,7 @@ import { Api } from "../../../Api/Api";
 const GameView = (props)=> {
     let { id } = props.match.params
     const [gameId,setGameId] = useState({}) 
-    
+    const getArray = ()=>{}
     useEffect(()=>{
         const LoadGameUnique = async ()=> {
             const response = await Api.getById('game',id)
@@ -24,3 +24,4 @@ const GameView = (props)=> {
 
 export default GameView;
 
+    

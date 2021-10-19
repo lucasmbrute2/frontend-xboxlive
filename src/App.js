@@ -1,6 +1,5 @@
-import './App.css';
+import './App.scss';
 import { Switch, Route } from "react-router-dom"
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/pages/Home/Home';
 import CreateUser from './components/pages/CreateUser/CreateUser';
@@ -12,7 +11,6 @@ function App() {
   return (
     
     <div className="App">
-      <Header/>
         <Switch>
           <Route path='/' exact={true} component={Home}/>
           <Route path='/user/add' component={CreateUser}/>
