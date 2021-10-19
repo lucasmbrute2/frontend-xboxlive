@@ -3,6 +3,9 @@ import { Switch, Route } from "react-router-dom"
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/pages/Home/Home';
+import CreateUser from './components/pages/CreateUser/CreateUser';
+import DeleteUser from './components/pages/DeleteUser/DeleteUser';
+import UpdateUser from './components/pages/UpdateUser/UpdateUser';
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <Header/>
         <Switch>
           <Route path='/' exact={true} component={Home}/>
+          <Route path='/user/add' component={CreateUser}/>
+          <Route path='/user/delete/:id' component={DeleteUser}/>
+          <Route path='/user/update/:id'component={UpdateUser}/>         
         </Switch>
       <Footer/>
     </div>
