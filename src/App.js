@@ -1,6 +1,5 @@
 import './App.scss';
 import { Switch, Route } from "react-router-dom"
-import Footer from './components/Footer/Footer';
 import Home from './components/pages/Home/Home';
 import CreateUser from './components/pages/CreateUser/CreateUser';
 import DeleteUser from './components/pages/DeleteUser/DeleteUser';
@@ -18,7 +17,6 @@ function App() {
           <Route path='/user/update/:id'component={UpdateUser}/>         
           <Route path='/view/:id' component={GameView}/>
         </Switch>
-      <Footer/>
     </div>
   );
 }

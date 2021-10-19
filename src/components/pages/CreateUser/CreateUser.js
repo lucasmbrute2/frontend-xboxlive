@@ -37,30 +37,39 @@ export default function CreateUser(props){
     
     
     
-    return(
+    return( 
         <div className='add'>
-            <div className='add-title-container'>
-                <img src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png'/>
-                <h1 className='add-h1'>Sounds</h1>
-            </div>
-            <div className='add-form'>
-                <form onSubmit={HandleSubmit}>
-                    <input name='name' placeholder='Nome' id='name'></input>
-                    
-                    <input name='lastName' placeholder='Sobrenome' id='lastName'></input>
-                    
-                    <input name='email' placeholder='E-mail' id='email'></input>
-                    
-                    <input name='password' type='password' placeholder='Senha' id='password'></input>
+                    <div className='add-title-container'>
+                        <img src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png'/>
+                        <h1 className='add-h1'>Sounds</h1>
+                    </div>
+                        <form onSubmit={HandleSubmit} className='add-form-'>
+                            <div className='add-form-div'>
+                                <input name='name' placeholder='Nome' id='name' className='add-form-div-input'></input>
+                            </div>
 
-                    <input name='cpf' placeholder='CPF' id='cpf'></input>
-                    
-                    <input type='submit' value='Cadastrar'></input>
+                            <div className='add-form-div'>
+                                <input name='lastName' placeholder='Sobrenome' id='lastName' className='add-form-div-input'></input>
+                            </div>
 
-                </form>
-        
-                <p>Já tem uma conta?<Link>Entre aqui</Link></p>
-            </div>    
+                            <div className='add-form-div'>
+
+                                <input name='email' placeholder='E-mail' id='email' className='add-form-div-input'></input>
+                            </div>
+                            <div className='add-form-div'>
+                                <input name='password' type='password' placeholder='Senha' id='password' className='add-form-div-input'></input>
+                            </div>
+
+                            <div className='add-form-div'>
+                                <input name='cpf' placeholder='CPF' id='cpf' className='add-form-div-input'></input>
+                            </div>
+
+                            <div className='add-form-div' style={{ width: '520' }}>
+                                <input type='submit' value='Cadastrar' className='input-submit'></input>
+                            </div>
+                        </form>
+                <p className='add-p'>Já tem uma conta?<Link className='add-p-span'>Entre aqui</Link></p>
+   
         </div>
     )
 }
