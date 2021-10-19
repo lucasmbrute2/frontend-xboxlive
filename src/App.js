@@ -6,6 +6,7 @@ import Home from './components/pages/Home/Home';
 import CreateUser from './components/pages/CreateUser/CreateUser';
 import DeleteUser from './components/pages/DeleteUser/DeleteUser';
 import UpdateUser from './components/pages/UpdateUser/UpdateUser';
+import GameView from './components/pages/GameView/GameView';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path='/user/add' component={CreateUser}/>
           <Route path='/user/delete/:id' component={DeleteUser}/>
           <Route path='/user/update/:id'component={UpdateUser}/>         
-          <Route path='/view/:id'/>
+          <Route path='/view/:id' component={GameView}/>
         </Switch>
       <Footer/>
     </div>
