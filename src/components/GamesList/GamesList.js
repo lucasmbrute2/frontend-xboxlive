@@ -26,12 +26,12 @@ export default function GamesList(){
         return "Carregando..."
     }
     return (
-        <div className='list-card'>
-            <section className="list-card-container">
-                {game.map((game,index)=>(
-                    <GamesCard key={`game_list_${index}`} game={game} className='list-card-container_card'/>
-                ))}
-            </section>
+        <div className='list-card'>     
+                    <div className="list-card-container">
+                        {game.map((game,index)=>(
+                            <GamesCard key={`game_list_${index}`} game={game} className='list-card-container_card'/>
+                        ))}
+                    </div>
         </div>
     );
 }
