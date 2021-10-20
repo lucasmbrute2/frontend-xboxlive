@@ -6,7 +6,6 @@ import "./GamesList.scss"
 
 export default function GamesList(){
     const [game,setGame]=useState([])
-    const [user,setUser]= useState([])
     useEffect(()=>{
         const loadGamesList = async ()=>{
             const response = await Api.getAll("game")
@@ -14,13 +13,7 @@ export default function GamesList(){
             setGame(results)
 
         }
-        const LoadUser = async ()=>{
-            const response  = await Api.getAll("user")
-            const results = await response.json()
-            setUser(results) //pegar o objeto User parar usar a foto de perfil na Home
-        }
         loadGamesList()
-        LoadUser()
     },[])
     if(!game){
         return "Carregando..."
