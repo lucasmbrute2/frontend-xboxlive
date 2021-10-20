@@ -20,7 +20,7 @@ export const Api={
         method:"POST",
         headers: new Headers({       
             "Content-type": "application/json",
-            ...undefined(auth? Api.authHeader():{})
+            ...(auth? Api.authHeader():{})
         }),
         body: JSON.stringify(body)
     })},
@@ -30,7 +30,7 @@ export const Api={
         method:"PUT",
         headers: new Headers({
             "Content-type": "application/json",
-            ...undefined(auth? Api.authHeader():{})
+            ...(auth? Api.authHeader():{})
         }),
         body:JSON.stringify(body)
     })},
