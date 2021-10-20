@@ -19,7 +19,8 @@ export const Api={
         return fetch(Api.baseUrl+path,{
         method:"POST",
         headers: new Headers({       
-            "Content-type": "application/json"
+            "Content-type": "application/json",
+            ...undefined(auth? Api.authHeader():{})
         }),
         body: JSON.stringify(body)
     })},
@@ -28,17 +29,15 @@ export const Api={
         return fetch(Api.baseUrl+path+"/update/"+id,{
         method:"PUT",
         headers: new Headers({
-            "Content-type": "application/json"
+            "Content-type": "application/json",
+            ...undefined(auth? Api.authHeader():{})
         }),
         body:JSON.stringify(body)
     })},
     delete: (path,body,id,auth)=> {
         return fetch(Api.baseUrl+path+"/delete/"+id,{
         method: "DELETE",
-        headers: new Headers({
-            "Content-type":"application/json"
-        }),
-        body:JSON.stringify(body)
+        headers: auth? new Headers(Api.authHeader()): undefined
     })}
 
 }
