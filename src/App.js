@@ -14,11 +14,11 @@ function App() {
     <div className="App">
         <Switch>
           <GuardedRoute path='/' exact={true} component={Home}/>
-          <Route path='login' component={Login}/>
+          <Route path='/login' component={Login}/>
           <Route path='/user/add' component={CreateUser}/>
           <Route path='/user/delete/:id' component={DeleteUser}/>
           <Route path='/user/update/:id'component={UpdateUser}/>         
-          <Route path='/view/:id' component={GameView}/>
+          <GuardedRoute path='/view/:id' component={GameView}/>
         </Switch>
     </div>
   );
