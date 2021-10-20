@@ -30,7 +30,16 @@ export default function CreateUser(props){
         console.log(body)
         
         if(response.status===201){
+            const payloadLogin = {
+                email: payload.email,
+                password: payload.password
+            }
+            const response =  await Api.post('login',payloadLogin)
+            const body = await response.json()
+            
+            localStorage.setItem('JWT',body.accessToken)
             props.history.push("/")   
+            
         }else{
             throw new Error('error')
         }
@@ -69,7 +78,7 @@ export default function CreateUser(props){
                                 <input type='submit' value='Cadastrar' className='input-submit'></input>
                             </div>
                         </form>
-                <p className='add-p'>Já tem uma conta?<Link className='add-p-span'>Entre aqui</Link></p>
+                <p className='add-p'>Já tem uma conta?<Link className='add-p-span' to='/login'>Entre aqui</Link></p>
    
         </div>
     )
