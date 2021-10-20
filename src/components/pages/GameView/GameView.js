@@ -7,7 +7,7 @@ const GameView = (props)=> {
     const [gameId,setGameId] = useState({}) 
     useEffect(()=>{
         const LoadGameUnique = async ()=> {
-            const response = await Api.getById('game',id)
+            const response = await Api.getById('game',id,true)
             const result = await response.json()
             setGameId(result)
         }
