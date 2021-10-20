@@ -9,6 +9,7 @@ export const Api={
         return fetch(Api.baseUrl+path,{
         method:"POST",
         headers: new Headers({       
+            "Content-type": "application/json"
         }),
         body: JSON.stringify(body)
     })},

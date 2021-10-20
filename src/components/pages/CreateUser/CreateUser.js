@@ -15,6 +15,7 @@ export default function CreateUser(props){
         const password = e.target.password.value
         const cpf = e.target.cpf.value
         const admin = false
+        
         const payload = {
             name,
             lastName,
