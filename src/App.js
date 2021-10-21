@@ -16,8 +16,8 @@ function App() {
           <Route path='/' exact={true} component={Home}/>
           <Route path='/login' component={Login}/>
           <Route path='/user/add' component={CreateUser}/>
-          <Route path='/user/delete/:id' component={DeleteUser}/>
-          <Route path='/user/update/:id'component={UpdateUser}/>         
+          <GuardedRoute path='/user/delete/:id' component={DeleteUser}/>
+          <GuardedRoute path='/user/update/:id'component={UpdateUser}/>         
           <GuardedRoute path='/view/:id' component={GameView}/>
         </Switch>
     </div>

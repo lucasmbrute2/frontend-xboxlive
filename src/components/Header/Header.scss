@@ -1,0 +1,36 @@
+i{
+    font-size: 25px;
+}
+
+.header{
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+
+    &-profile{
+        display: flex;
+        &-logout{
+            margin: 0;
+        }
+    }
+
+    &-menu{
+
+        &-list{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            flex-wrap: wrap;
+            &-li{
+                padding: 1rem;
+                color: #fff;
+                padding: 1.5rem;
+                font-family: Poppins;
+                letter-spacing: .05em;              
+            }
+            
+        }
+    }
+}
