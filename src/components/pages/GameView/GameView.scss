@@ -1,0 +1,52 @@
+.view{
+    padding: 2rem 5rem;
+    
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &-p{
+        color: #fff;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    &-game{
+        display: flex;
+        margin: 100px 0;
+
+        &-container{
+
+            &-img{
+
+                &-img{
+                    width: 300px;
+                    height: auto;
+                    border-radius: 18px;
+                }
+            }
+        
+            &-text{
+                max-width: 700px;
+                display: flex;
+                flex-direction: column;
+                margin-left: 45px;
+                color: rgba(255, 255, 255, 0.884);
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                text-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+            }
+        }
+    
+        &-title{
+            font-size: 50px;
+            margin: 20px 0;
+        }
+    }
+
+}
