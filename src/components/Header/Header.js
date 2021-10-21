@@ -5,18 +5,28 @@ import "./Header.scss"
 
 export default function Header(){
     
+    const [login,setLogin]= useState('') 
     const [user,setUser] = useState([])
-    
     const userId = localStorage.getItem('userID')
+    const jwt = localStorage.getItem('JWT')  
     
     useEffect(()=>{
         const getUser= async ()=>{
             const response = await Api.getById('user',userId,true)
             const results = await response.json()
             setUser(results)
+            if(jwt){
+                setLogin("Logout")
+                console.log('entrou true')
+            }else{
+                setLogin("Entrar")
+            }
         }
+
         getUser()
-    },[userId])
+        
+    },[userId,jwt])
+    
 
     const today = new Date()
     const date = new Intl.DateTimeFormat('pt-BR',{hour:"numeric",minute:"numeric"}).format(today)
@@ -27,7 +37,7 @@ export default function Header(){
                 <div className='header-profile-logout'>
                     <p>{user.name}</p>    
                     <span>
-                        <Link>Logout</Link>
+                        {jwt? <Link to='/'>{login}</Link>:<Link to='/login'>{login}</Link>}
                     </span>
                 </div>
             </div>
