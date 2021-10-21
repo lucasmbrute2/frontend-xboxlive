@@ -49,6 +49,7 @@ export default function CreateUser(props){
     
     return( 
         <div className='add'>
+                    <Link to='/'>Home</Link>
                     <div className='add-title-container'>
                         <img src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png'/>
                         <h1 className='add-h1'>Sounds</h1>

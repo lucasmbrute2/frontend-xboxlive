@@ -1,15 +1,17 @@
 import { Api } from "../../Api/Api"
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import "./Header.scss"
 
 export default function Header(){
     
     const [user,setUser] = useState([])
     
+    const userId = localStorage.getItem('userID')
+    
     useEffect(()=>{
         const getUser= async ()=>{
-            const response = await Api.getAll('user')
+            const response = await Api.getById('user',userId,true)
             const results = await response.json()
             setUser(results)
         }
@@ -23,13 +25,15 @@ export default function Header(){
             <div className='header-profile'>
                 <img />
                 <div className='header-profile-logout'>
-                    <p>Lucas</p>    
+                    <p>{user.name}</p>    
                     <span>
                         <Link>Logout</Link>
                     </span>
                 </div>
             </div>
-
+            <div>
+                <Link to='/user/add'>Criar conta</Link>
+            </div>
             <div className='header-menu'>
                 <ul className='header-menu-list'>
                     <li className='header-menu-list-li'><i class="fas fa-search"></i></li>
