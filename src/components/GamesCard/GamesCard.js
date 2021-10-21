@@ -9,7 +9,7 @@ export default function GamesCard({ game }){
 
             <Link to={`/view/${game.id}`}>           
                     <div className='div-card'>
-                            <img src={game.cover} class='div-card-img'/>
+                            <img src={game.cover} class='div-card-img' alt={game.title}/>
                    </div>
             </Link>
                 

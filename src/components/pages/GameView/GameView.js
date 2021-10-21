@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Api } from "../../../Api/Api";
 import "./GameView.scss"
 import { Link } from "react-router-dom"
+
 const GameView = (props)=> {
     let { id } = props.match.params
     const [gameId,setGameId] = useState({}) 
@@ -19,7 +20,7 @@ const GameView = (props)=> {
     return(
         <div className='view'>
             <div className='view-header'>
-                <Link to='/'><img src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png'/> </Link>
+                <Link to='/'><img src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png' alt='logo'/> </Link>
                 <p className='view-p'>{date}</p>
             </div>
             
@@ -33,6 +34,11 @@ const GameView = (props)=> {
                     <p className='view-game-description'>{gameId.description}</p>
                 </div>
             
+                <div className='view-game-container-imdb'>
+                    <p className='view-game-container-imdb-p' >{gameId.imdb}</p>
+                    <i className="fas fa-star"></i>
+
+                </div>
             </div>
                 
 

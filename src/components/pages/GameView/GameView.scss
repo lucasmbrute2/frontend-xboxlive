@@ -1,3 +1,9 @@
+i{
+    color: #fff;
+
+}
+
+
 .view{
     padding: 2rem 5rem;
     
@@ -40,6 +46,19 @@
                 font-weight: 500;
                 font-size: 16px;
                 text-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+            }
+        
+            &-imdb{
+                display: flex;
+                align-items: center;
+                margin-left: 150px;
+            
+                &-p{
+                    color: #fff;
+                    font-family: Poppins;
+                    margin-right: 10px;
+
+                }
             }
         }
     
