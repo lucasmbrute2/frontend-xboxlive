@@ -56,23 +56,23 @@ export default function CreateUser(props){
                     </div>
                         <form onSubmit={HandleSubmit} className='add-form-'>
                             <div className='add-form-div'>
-                                <input name='name' placeholder='Nome' id='name' className='add-form-div-input'></input>
+                                <input name='name' placeholder='Nome' id='name' className='add-form-div-input' required></input>
                             </div>
 
                             <div className='add-form-div'>
-                                <input name='lastName' placeholder='Sobrenome' id='lastName' className='add-form-div-input'></input>
+                                <input name='lastName' placeholder='Sobrenome' id='lastName' className='add-form-div-input' required></input>
                             </div>
 
                             <div className='add-form-div'>
 
-                                <input name='email' placeholder='E-mail' id='email' className='add-form-div-input'></input>
+                                <input name='email' placeholder='E-mail' id='email' className='add-form-div-input' required></input>
                             </div>
                             <div className='add-form-div'>
-                                <input name='password' type='password' placeholder='Senha' id='password' className='add-form-div-input'></input>
+                                <input name='password' type='password' placeholder='Senha' id='password' className='add-form-div-input' required></input>
                             </div>
 
                             <div className='add-form-div'>
-                                <input name='cpf' placeholder='CPF' id='cpf' className='add-form-div-input'></input>
+                                <input name='cpf' placeholder='CPF' id='cpf' className='add-form-div-input' required></input>
                             </div>
 
                             <div className='add-form-div' style={{ width: '520' }}>
