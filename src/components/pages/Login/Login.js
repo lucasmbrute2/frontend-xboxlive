@@ -21,6 +21,9 @@ export default function Login(props){
             const accessToken = body.accessToken
             
             localStorage.setItem("JWT",accessToken)
+            
+            localStorage.setItem('userID',body.userID)
+            
             console.log({ accessToken })
             props.history.push('/')
         
