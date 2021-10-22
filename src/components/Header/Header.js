@@ -35,7 +35,6 @@ export default function Header(){
             setUser(results)
             if(jwt){
                 setLogin("Logout")
-                console.log('entrou true')
             }else{
                 setLogin("Entrar")
             }
@@ -50,6 +49,10 @@ export default function Header(){
         getUser()
         getProfile() 
     },[userId,jwt,profileId])
+    
+    const Logout = ()=>{
+        localStorage.removeItem('JWT')
+    }
     
     // Mui function
     const handleClick = (event) => {
@@ -75,7 +78,10 @@ export default function Header(){
                 <div className='header-profile-desc'>
                     <i class="fas fa-sign-in-alt" id='logo-sign-out'></i>
                     <p className='header-profile-desc-p'>
-                        {jwt? <Link to='/' className='header-profile-desc-p-link'>{login}</Link>:<Link to='/user/add' className='header-profile-desc-p-link'>{login}</Link>}
+                        {jwt? 
+                        <Link onClick={Logout} to='/user/add' className='header-profile-desc-p-link'>{login}</Link>
+                        :<Link to='/user/add' className='header-profile-desc-p-link'>{login}</Link>}
+                        
                     </p>
                 </div>
             </div>
