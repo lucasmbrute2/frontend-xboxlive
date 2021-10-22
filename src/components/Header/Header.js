@@ -34,10 +34,13 @@ export default function Header(){
         <header className='header'>
             <div className='header-profile'>
                 {/* <img /> */}
-                <div className='header-profile-logout'>
-                    <p className='header-profile-logout-p'>{user.name}</p>    
-                    <p className='header-profile-logout-container'>
-                        {jwt? <Link to='/' className='header-profile-logout-container-link'>{login}</Link>:<Link to='/user/add' className='header-profile-logout-container-link'>{login}</Link>}
+                <div className='header-profile-name'>
+                    <p className='header-profile-name-p'>{user.name} {user.lastName}</p>    
+                </div>
+                <div className='header-profile-desc'>
+                    <i class="fas fa-sign-in-alt" id='logo-sign-out'></i>
+                    <p className='header-profile-desc-p'>
+                        {jwt? <Link to='/' className='header-profile-desc-p-link'>{login}</Link>:<Link to='/user/add' className='header-profile-desc-p-link'>{login}</Link>}
                     </p>
                 </div>
             </div>
