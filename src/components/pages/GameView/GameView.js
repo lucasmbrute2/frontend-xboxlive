@@ -20,7 +20,7 @@ const GameView = (props)=> {
     return(
         <div className='view'>
             <div className='view-header'>
-                <Link to='/'><img src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png' alt='logo'/> </Link>
+                <Link to='/'><img id ='logo-view'src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png' alt='logo'/> </Link>
                 <p className='view-p'>{date}</p>
             </div>
             
