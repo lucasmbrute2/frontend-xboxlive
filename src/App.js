@@ -7,6 +7,7 @@ import UpdateUser from './components/pages/UpdateUser/UpdateUser';
 import GameView from './components/pages/GameView/GameView';
 import GuardedRoute from './components/GuardedRoute/GuardedRoute';
 import Login from './components/pages/Login/Login';
+import Profile from './components/pages/Profile/Profile';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <GuardedRoute path='/user/delete/:id' component={DeleteUser}/>
           <GuardedRoute path='/user/update/:id'component={UpdateUser}/>         
           <GuardedRoute path='/view/:id' component={GameView}/>
+          <GuardedRoute path='/profile' component={Profile}/>
         </Switch>
     </div>
   );
