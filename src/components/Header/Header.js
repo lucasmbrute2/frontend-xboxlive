@@ -64,7 +64,6 @@ export default function Header(){
                 </div>
             </div>
             <div>
-                <Link to='/user/add'>Criar conta</Link>
             </div>
             <div className='header-menu'>
                 <ul className='header-menu-list'>
@@ -98,9 +97,7 @@ export default function Header(){
                                 <MenuItem onClick={handleClose}>Configurações</MenuItem>
                                 
                             </Menu>                                                                                                        
-                        </li>                   
-                    
-                    
+                        </li>                                                   
                     <li className='header-menu-list-li'>{date}</li>
                     
                     <li className='header-menu-list-li'><img className='menu-img' src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png' alt='logo'/></li>
