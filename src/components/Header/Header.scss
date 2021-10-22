@@ -14,14 +14,14 @@ i{
 }
 
 .header{
-    margin: 30px 100px;
+    margin: 32px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 90px;
 
     &-profile{
-
+        margin-top: 35px;
         width: 150px;
 
         &-name{

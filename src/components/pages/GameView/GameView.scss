@@ -2,13 +2,11 @@ i{
     color: #fff;
 
 }
-#logo-view{
-    width: 70px;
-    height: auto;
-    border-radius: 18px;
+#icon-backward{
+    margin: 15px;
     transition: .2s all;
     &:hover{
-        transform: scale(1.2);
+        transform: scale(1.3);
     }
 }
 

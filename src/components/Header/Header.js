@@ -70,7 +70,7 @@ export default function Header(){
                     <img src={profile.image} alt={profile.title}/>
                 </Link>
                 <div className='header-profile-name'>
-                    <p className='header-profile-name-p'>{user.name} {user.lastName}</p>    
+                    <p className='header-profile-name-p'>{profile.title} </p>    
                 </div>
                 <div className='header-profile-desc'>
                     <i class="fas fa-sign-in-alt" id='logo-sign-out'></i>
