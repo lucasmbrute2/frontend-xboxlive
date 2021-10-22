@@ -16,11 +16,19 @@ export default function Header(){
     
     //States
     const [login,setLogin]= useState('') 
-    const [user,setUser] = useState([])
-    const userId = localStorage.getItem('userID')
-    const jwt = localStorage.getItem('JWT')  
     
+    const [user,setUser] = useState([])
+   
+    const [profile,setProfile] = useState([])
+    //Variáveis
+    const userId = localStorage.getItem('userID')
+    
+    const profileId = localStorage.getItem('profileId')
+
+    const jwt = localStorage.getItem('JWT')  
+
     useEffect(()=>{
+        //Função recebendo os dados do User do banco
         const getUser= async ()=>{
             const response = await Api.getById('user',userId,true)
             const results = await response.json()
@@ -32,10 +40,16 @@ export default function Header(){
                 setLogin("Entrar")
             }
         }
-
-        getUser()
         
-    },[userId,jwt])
+        const getProfile = async ()=>{
+            const response = await Api.getById('profile',profileId,true)
+            const body = await response.json()
+            setProfile(body)
+        }
+        
+        getUser()
+        getProfile() 
+    },[userId,jwt,profileId])
     
     // Mui function
     const handleClick = (event) => {
@@ -52,7 +66,9 @@ export default function Header(){
     return(
         <header className='header'>
             <div className='header-profile'>
-                {/* <img /> */}
+                <Link to='/profile'>
+                    <img src={profile.image} alt={profile.title}/>
+                </Link>
                 <div className='header-profile-name'>
                     <p className='header-profile-name-p'>{user.name} {user.lastName}</p>    
                 </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Api } from "../../../Api/Api"
+import ProfileCard from "../../ProfileCard/ProfileCard"
 import "./Profile.scss"
 
 export default function Profile(){
@@ -15,21 +16,13 @@ export default function Profile(){
       } 
       getProfile()
     },[profile.id])
-    
-    const HandleJwt = (e)=>{
-      console.log(e)
-    }
-    
     return(
-      <div className='profile'>
+      <div className='profile-card-div'>
         {profile.map((eachProfile)=>(
-          <div onClick={()=>HandleJwt(key)} className='profile-container' key={`profile_list_${eachProfile.id}`}>
-            <p className='profile-container-p'>{eachProfile.title}</p>
-            
-            <div className='container-2'>
-              <img className='profile-container-img' src={eachProfile.image} alt={eachProfile.title}/>         
-            </div>        
-          </div>
+          <ProfileCard 
+          key={`profile_list_${profile.id}`}
+          profile={eachProfile}
+          />
         ))}
 
       </div>

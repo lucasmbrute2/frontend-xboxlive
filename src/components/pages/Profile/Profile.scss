@@ -1,4 +1,4 @@
-.profile{
+.profile-card-div{
     height: 100vh;
     background: rgba(0, 0, 0, 0.692);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.6) 100%);
@@ -6,29 +6,5 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    &-container{
-        margin-bottom: 200px;
-        &-p{
-            color: #fff;
-            font-family: Poppins, sans-serif;
-            font-size: 24px;
-            margin-left: 70px;
-            margin-top: 0;
-        }
-        &-img{
-            width: 100px;
-            height: auto;
-            border-radius: 4px;
-        }
-    }
-}
-
-.container-2{
-    display: flex;
-    margin: 15px 50px 0 55px;
-}
-
-#icon-edit{
-    font-size: 15px;
-    margin-left: 10px;
+    
 }
