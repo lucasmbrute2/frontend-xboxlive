@@ -35,10 +35,10 @@ export default function Header(){
             <div className='header-profile'>
                 {/* <img /> */}
                 <div className='header-profile-logout'>
-                    <p>{user.name}</p>    
-                    <span>
-                        {jwt? <Link to='/'>{login}</Link>:<Link to='/login'>{login}</Link>}
-                    </span>
+                    <p className='header-profile-logout-p'>{user.name}</p>    
+                    <p className='header-profile-logout-container'>
+                        {jwt? <Link to='/' className='header-profile-logout-container-link'>{login}</Link>:<Link to='/user/add' className='header-profile-logout-container-link'>{login}</Link>}
+                    </p>
                 </div>
             </div>
             <div>
@@ -48,7 +48,7 @@ export default function Header(){
                 <ul className='header-menu-list'>
                     <li className='header-menu-list-li'><i class="fas fa-search"></i></li>
                     <li className='header-menu-list-li'><i class="far fa-comment-dots"></i></li>
-                    <li className='header-menu-list-li'><i class="fas fa-cog"></i></li>
+                    <Link to='/profile'><li className='header-menu-list-li'><i class="fas fa-cog" id='teste'></i></li></Link>
                     <li className='header-menu-list-li'>{date}</li>
                     <li className='header-menu-list-li'><img className='menu-img' src='https://images.vexels.com/media/users/3/142890/isolated/preview/4ea2d7c4bf3cad23a4f18ee58752deb8-high-tech-rings-logo.png' alt='logo'/></li>
                 </ul>
