@@ -1,5 +1,6 @@
 import "./ProfileCard.scss"
 import { Link } from "react-router-dom"
+
 export default function ProfileCard({ profile }){
     const profileId = profile.id //alocando o id do Profile em uma variável
     
