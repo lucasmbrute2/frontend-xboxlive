@@ -21,7 +21,7 @@
     background: rgba(179, 179, 179, 0.3);
     border: none;
     border-radius: 5px;
-    margin: 9px;
+    margin: 10px 0;
     padding-left: 1rem;
     color: #fff;
     font-size: 13px;
@@ -38,9 +38,28 @@
     &-submit{
         background-color: rgb(114, 208, 236);;
         color: #000;
-        transition: .2s ease-in;        
+        transition: .1s ease-in;        
+        width: 145px;
+        text-align: center;
+        font-size: 14px;
+        padding: 0;
+        cursor: pointer;
+        margin: 21px 0 0 65px;
         &:hover{
             transform: scale(1.1);
         }   
+        &-danger{
+            background-color: salmon;
+            width: 145px;
+            margin: 21px 25px 0 0
+        }
     }
+
 }
+
+.div-form-form-container-flex{
+    display: flex;
+
+
+}
+

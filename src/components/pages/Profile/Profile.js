@@ -2,6 +2,7 @@ import ProfileList from "../../ProfileList/ProfileList"
 import "./Profile.scss"
 import { useState } from "react"
 import CreateProfile from "../../CreateProfile/CreateProfile"
+import PlusButton from "../../PlusButton/PlusButton"
 
 export default function Profile(){
 
