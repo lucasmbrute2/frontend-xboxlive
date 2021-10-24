@@ -29,12 +29,14 @@ export default function Header(){
 
     useEffect(()=>{
         //Função recebendo os dados do User do banco
+        console.log('chamou o useEffect')
         const getUser= async ()=>{
             const response = await Api.getById('user',userId,true)
             const results = await response.json()
             setUser(results)
             if(jwt){
                 setLogin("Logout")
+               
             }else{
                 setLogin("Entrar")
             }
@@ -56,7 +58,6 @@ export default function Header(){
     
     // Mui function
     const handleClick = (event) => {
-        console.log(event.currentTarget);
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
@@ -79,7 +80,7 @@ export default function Header(){
                     <i class="fas fa-sign-in-alt" id='logo-sign-out'></i>
                     <p className='header-profile-desc-p'>
                         {jwt? 
-                        <Link onClick={Logout} to='/user/add' className='header-profile-desc-p-link'>{login}</Link>
+                        <Link onClick={Logout} to='/' className='header-profile-desc-p-link'>{login}</Link>
                         :<Link to='/user/add' className='header-profile-desc-p-link'>{login}</Link>}
                         
                     </p>

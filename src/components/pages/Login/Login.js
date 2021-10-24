@@ -15,8 +15,7 @@ export default function Login(props){
     
         const response = await Api.post('login',payload)
         const body = await response.json()
-        console.log(body)
-        
+                
         if(response.status===200){
             const accessToken = body.accessToken
             
@@ -24,7 +23,6 @@ export default function Login(props){
             
             localStorage.setItem('userID',body.userID)
             
-            console.log({ accessToken })
             props.history.push('/')
         
         }else{
