@@ -8,5 +8,11 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    &-button{
+        margin: 360px 35px;
+        text-align: center;
+    }
+
 }
 
