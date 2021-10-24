@@ -1,4 +1,3 @@
-import PlusButton from "../../PlusButton/PlusButton"
 import ProfileList from "../../ProfileList/ProfileList"
 import "./Profile.scss"
 import { useState } from "react"
