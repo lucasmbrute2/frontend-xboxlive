@@ -1,12 +1,35 @@
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
+import { Api } from "../../Api/Api"
 import "./CreateProfile.scss"
 
 export default function CreateProfile(){
     
-    const HandleSubmit = (e)=>{
+    const history = useHistory()
+    
+    const HandleSubmit = async (e)=>{
         e.preventDefault()
-        console.log('hello')
+        
+        const title = e.target.title.value
+        const image = e.target.image.value
+        const userId = +localStorage.getItem('userID')
+        
+        const payload = {
+            title,
+            image,
+            userId
+        }
+        
+        
+        const response = await Api.post('profile',payload,true)
+        const result = await response.json()
+        
+        if(response.status===201){
+            history.push("/")
+        }else{
+            throw new Error()
+        }
     }
+
     return(
         <div id='add'>
            <div id='add-h1'>
@@ -38,9 +61,7 @@ export default function CreateProfile(){
                             <input type='submit' value='Cadastrar' className='input-profile input-profile-submit'>
                             </input>
                         </div>
-                        
-                                            
-                
+                                                                          
                 </form>
             </div>
         </div>
