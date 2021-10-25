@@ -25,7 +25,7 @@ export default function CreateUser(props){
             admin
         }
         const response = await Api.post('user',payload)
-        const body = await response.json()
+
         
         if(response.status===201){
             const payloadLogin = {

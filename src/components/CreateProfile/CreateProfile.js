@@ -21,7 +21,7 @@ export default function CreateProfile(){
         
         
         const response = await Api.post('profile',payload,true)
-        const result = await response.json()
+
         
         if(response.status===201){
             history.push("/")
@@ -55,13 +55,12 @@ export default function CreateProfile(){
                     
                            <Link to='/'>
                                 <button className='input-profile input-profile-submit input-profile input-profile-submit-danger' >
-                                Voltar
+                                Cancelar
                                 </button>   
                             </Link>
                             <input type='submit' value='Cadastrar' className='input-profile input-profile-submit'>
                             </input>
-                        </div>
-                                                                          
+                        </div>                                             
                 </form>
             </div>
         </div>

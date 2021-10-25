@@ -21,7 +21,7 @@ const GameView = (props)=> {
         <div className='view'>
             <div className='view-header'>
                 <Link to='/'>
-                <i class="fas fa-arrow-left" id='icon-backward'></i>
+                <i className="fas fa-arrow-left" id='icon-backward'></i>
                 </Link>
                 <p className='view-p'>{date}</p>
             </div>
