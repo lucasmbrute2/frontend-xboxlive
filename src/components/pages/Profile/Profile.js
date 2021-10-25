@@ -7,22 +7,17 @@ import PlusButton from "../../PlusButton/PlusButton"
 export default function Profile(){
 
   const [edit,setEdit] = useState(true)
-  
+    console.log(edit)
   return(
       <div className='profile-card-div'>
         <div>
           {edit ? <ProfileList/> : <CreateProfile/>}
+        </div>       
+        <div className='profile-card-div-button'>
+          <PlusButton className={edit? "fas fa-plus": "fas fa-arrow-left"}id={edit?'icon-plus':'icon-back-arrow'} onClick={()=>setEdit(!edit)} ></PlusButton>
+          {edit?<p className='add-profile-p'>Adicionar perfil</p> :""}  
         </div>
-        
-        {edit ?
-          <div className='profile-card-div-button'>
-            <i className= "fas fa-plus-circle" onClick={()=>setEdit(!edit)} id='icon-plus'></i>
-            <p className='add-profile-p'>Adicionar perfil</p>
-          </div>
-        : ''
-        }
-
+          
       </div>
-
   )
 }
