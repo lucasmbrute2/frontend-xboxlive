@@ -1,7 +1,9 @@
-export default function PlusButton(){
+import "./PlusButton.scss"
+
+export default function PlusButton({ onClick, className, id }){
     
     return <div className='plus-button'>
-        <i class="fas fa-plus-circle" id='icon-plus'></i>
+        <button onClick={onClick} className={className} id={id} ></button>
     </div>
 
 }
