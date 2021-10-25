@@ -29,7 +29,6 @@ export default function Header(){
 
     useEffect(()=>{
         //Função recebendo os dados do User do banco
-        console.log('chamou o useEffect')
         const getUser= async ()=>{
             const response = await Api.getById('user',userId,true)
             const results = await response.json()
